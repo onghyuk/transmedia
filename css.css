@@ -19,15 +19,26 @@
 body{background-color: black;
 color:white;}
 
+.background{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    
+    width: 100vw;
+    height: 100vh;
+    
+    z-index: 9;
+}
 .location1{
     position: absolute;
     left: 30vw;
     top:20vh;
     
-    width: 60vw;
+    width: 55vw;
     height: 50vh;
     opacity: 0;
     
+    z-index: 10;
     animation-name: loc1;
     animation-delay: 5s;
     animation-duration: 15s;
@@ -39,10 +50,10 @@ color:white;}
     left: 10vw;
     top:25vh;
     
-    width: 25vw;
+    width: 23vw;
     height: 70vh;
     opacity: 0;
-    
+    z-index: 10;
     animation-name: loc2;
     animation-delay: 15s;
     animation-duration: 26s;
@@ -57,7 +68,7 @@ color:white;}
     width: 65vw;
     height: 80vh;
     opacity: 0;
-    
+    z-index: 10;
     animation-name: loc2;
     animation-delay: 32s;
     animation-duration: 28s;
