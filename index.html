@@ -4,31 +4,145 @@
     <meta charset="UTF-8">
     <title>TransMedia</title>
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="stylesheet" href="css.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  
 </head>
 
 
 <body>
-    <!--
+   <audio id="audio" src="korea.mp3" loop></audio>
+   <audio id="gosung" src="gosung.mp3" loop></audio>
+    
+    
     <div class="cover">
         <h1>Title</h1>
         <p>content</p>
+        <input type="button" value="enter" onclick="play();enter();">
+    </div>   
+    
+    
+    
+    <div id=background>
+    <img src="BOARD!!.jpg" id="backimg">
+    
+    
     </div>
-    -->
-    <div class=background>
-    <img src="BOARD!!.jpg" style="width: 100vw; height: 100vh">
+    <div id="pin1"  onclick="pin1();gosung()" style="display: block;"></div>
+    
+    <div id="locate1">
+       
+        <iframe width="80%" height="89%" id="window" src="https://www.youtube.com/embed/5MxU8GoBoGE?autoplay=1&mute=1&loop=1&playlist=5MxU8GoBoGE&controls=0" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <div class="block"></div>
+        
+        <a class="back" onclick="back();">&larr;</a>
+        
+        <iframe
+        class="street"
+        width="600"
+        height="450"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/streetview
+        ?key=AIzaSyC6-qQxu0g7XDK6s2lNgW7ZzRn5jJqVvHs
+        &location=46.414382,10.013988
+        &heading=210
+        &pitch=10
+        &fov=35" allowfullscreen>
+        </iframe>
+       
     </div>
-    
-    <iframe src="korea.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-    <audio id="myAudio" autoplay loop>
-        <source src="korea.mp3" type="audio/mp3">
-    </audio>
-    
-    
-    
+   
 
+   
+    
+    <script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+        
+      function gosung() {
+        var audio = document.getElementById("gosung");
+        audio.play();
+      }    
+        
+        
+        
+      function enter() {
+      document.getElementById("background").style.zIndex = "2";
+      document.getElementById("background").style.opacity = "1";
+      document.getElementById("pin1").style.zIndex = "9"; 
+       document.getElementById("pin1").style.opacity = "1";        
+      }    
+        
+      function back() {
+      document.getElementById("backimg").style.width = "100vw";
+      document.getElementById("backimg").style.height = "100vh";
+      document.getElementById("locate1").style.zIndex = "0";    
+      document.getElementById("locate1").style.opacity = "0"; 
+      document.getElementById("pin1").style.opacity = "1";
+          
+      }     
+    </script>
+    
+    <script>
+    $("#pin1").click(function(){
+        $("#audio")[0].volume = 1;
+        $("#audio").animate({volume: 0}, 4500);
+      });
+        
+     $("#pin1").click(function(){
+        $("#gosung")[0].volume = 0;
+        $("#gosung").animate({volume: 1}, 4000);
+      });  
+        
+    $(".back").click(function(){
+        $("#gosung")[0].volume = 1;
+        $("#gosung").animate({volume: 0}, 4000);
+      });       
+    </script>
+    
+    
+    <script>    
+    $(".back").click(function(){
+        $("#audio")[0].volume = 0;
+        $("#audio").animate({volume: 1}, 4000);
+      });    
+    </script>
+    
+    
+    
+    <script>
+      function pin1() {
+      document.getElementById("backimg").style.width = "200vw";
+      document.getElementById("backimg").style.height = "200vh";
+      document.getElementById("locate1").style.zIndex = "7";    
+      document.getElementById("locate1").style.opacity = "1"; 
+      document.getElementById("pin1").style.opacity = "0";       
+      }
+        
+        
+        
+      function pinout() {
+        var x = document.getElementById("pin1");
+  
+    
+        if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+          
+      }      
+        
+      function blockin() {
+      document.getElementsByClassName("block").style.zIndex = "8";  
+      }   
+    </script>
+    
+   
     
 </body>
 </html>

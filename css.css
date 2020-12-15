@@ -17,6 +17,8 @@
    100% {opacity: 0;}   
 }
 
+@keyframes spin { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } }
+
 
 
 
@@ -27,7 +29,7 @@ padding: 0px;
 overflow-x: hidden;
 overflow-y: hidden;}
 
-.background{
+#background{
     position: absolute;
     left: 0px;
     top:0px;
@@ -36,6 +38,9 @@ overflow-y: hidden;}
     height: 100vh;
     
     z-index: 0;
+    opacity: 0;
+    
+    transition: 6s;
 
 }
 
@@ -49,22 +54,77 @@ overflow-y: hidden;}
     z-index:1;
     
     background-color: black;
-    animation-name: cover;
-    animation-delay: 1s;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+    
    
-     text-align: center;
+    text-align: center;
     color: white;
     
     padding-top:150px;
 }
 
+#backimg{
+    width: 100vw;
+    height: 100vh;
+    
+    transition-duration: 3s;
+}
 
 
+#pin1{
+    position: absolute;
+    left: 300px;
+    top: 150px;
+    
+    width: 15px;
+    height: 15px;
+    
+    border-radius: 50%;
+    background-color: white;
+    z-index: 0;
+    
+    animation:spin 4s linear infinite;
+    opacity: 0;
+    
+    
+    cursor: pointer;
+    
+    transition-delay: 2s;
+    transition-duration: 1s;
+    
+}
 
 
+#locate1{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 5vh;
+    width: 100vw;
+    height: 100vh;
+    
+    
+    transition-duration: 5s;
+    
+    z-index: 0;
+    opacity: 0;
+    
+}
 
+.block{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    
+    width: 80vw;
+    height: 89vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 5vh;
+    z-index: 0;
+}
 
 
 .cover{
@@ -77,4 +137,20 @@ overflow-y: hidden;}
     
     z-index: 1;
     
+}
+
+.street{
+    position: absolute;
+    top:150px;
+    left: 150px;
+    
+    
+}
+
+.back{
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    font-size: 30px;
+    cursor: pointer;
 }
