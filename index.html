@@ -8,17 +8,7 @@
     <link rel="stylesheet" href="css.css">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
   
-    <system.webServer>
-  ...
-
-  <httpProtocol>
-    <customHeaders>
-      <add name="X-Frame-Options" value="DENY" />
-    </customHeaders>
-  </httpProtocol>
-
-  ...
-</system.webServer>
+    Header set X-Frame-Options "DENY"</http>
 </head>
 
 
@@ -50,18 +40,7 @@
         
         <a class="back" onclick="back();">&larr;</a>
         
-        <iframe
-        class="street"
-        width="28%"
-        height="38%"
-        frameborder="0" style="border:0"
-        src="https://www.google.com/maps/embed/v1/streetview
-        ?key=AIzaSyC6-qQxu0g7XDK6s2lNgW7ZzRn5jJqVvHs
-        &location=37.7846260420087, 126.66380302657171
-        &heading=210
-        &pitch=10
-        &fov=35" allowfullscreen>
-        </iframe>
+        <iframe src="https://www.google.com/maps/embed/v1/streetview?location=51.398734,-2.3936212&fov=80&heading=70&pitch=0&key=AIzaSyC6-qQxu0g7XDK6s2lNgW7ZzRn5jJqVvHs" width="28%" height="38%" frameborder="0" style="border:0;" allowfullscreen=""class="street"></iframe>
        
     </div>
    
