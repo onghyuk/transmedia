@@ -144,7 +144,13 @@ overflow-y: hidden;}
     top:47vh;
     left: 33vw;
     
+    opacity: 0.2;
     
+    transition-duration: 1s;
+}
+
+.street:hover{
+    opacity: 1;
     
 }
 
