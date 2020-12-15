@@ -141,8 +141,9 @@ overflow-y: hidden;}
 
 .street{
     position: absolute;
-    top:150px;
-    left: 150px;
+    top:47vh;
+    left: 33vw;
+    
     
     
 }
