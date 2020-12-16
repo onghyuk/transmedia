@@ -19,28 +19,37 @@
 
 @keyframes spin { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } }
 
+@keyframes spinre { 100% { -webkit-transform: rotateX(360deg); transform:rotateX(360deg); } }
 
+@font-face {
+    font-family:"dotline";
+    src:url(dotline-Regular.woff) ;
+   
+}
 
 
 body{background-color: black;
 color:white;
 padding: 0px;
+padding-top: 0px;    
 
 overflow-x: hidden;
-overflow-y: hidden;}
+overflow-y: hidden;
+
+font-family: dotline;}
 
 #background{
     position: absolute;
     left: 0px;
     top:0px;
-    
+    padding: 0px;
     width: 100vw;
     height: 100vh;
     
     z-index: 0;
     opacity: 0;
     
-    transition: 6s;
+    transition: 3s;
 
 }
 
@@ -51,7 +60,7 @@ overflow-y: hidden;}
     width: 100vw;
     height: 100vh;
     
-    z-index:1;
+    z-index:8;
     
     background-color: black;
     
@@ -59,7 +68,42 @@ overflow-y: hidden;}
     text-align: center;
     color: white;
     
-    padding-top:150px;
+    padding-top:80px;
+}
+
+.content{
+    max-width: 900px;
+    padding-left:25vw;
+    padding-right: 25vw;
+    
+    line-height: 25px;
+}
+
+.button{
+    cursor: pointer;
+}
+
+#header{
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    
+    font-size:25px;
+    opacity: 0;
+    z-index: 9;
+    transition-duration: 3s;
+}
+
+#about{
+    position: absolute;
+    top: -15px;
+    right: 30px;
+    
+    cursor: pointer;
+    font-size:25px;
+    opacity: 0;
+    z-index: 9;
+    transition-duration: 3s;
 }
 
 #backimg{
@@ -70,31 +114,145 @@ overflow-y: hidden;}
 }
 
 
-#pin1{
-    position: absolute;
-    left: 300px;
-    top: 150px;
+.pin{
     
-    width: 15px;
-    height: 15px;
+    
+    width: 13px;
+    height: 13px;
     
     border-radius: 50%;
-    background-color: white;
-    z-index: 0;
+    background-color: none;
     
-    animation:spin 4s linear infinite;
-    opacity: 0;
     
+    border: 2px dotted white;
     
     cursor: pointer;
     
-    transition-delay: 2s;
-    transition-duration: 1s;
+    transition-delay: 1.5s;
+    transition-duration: 1.5s;
     
 }
 
+#pin1{
+    position: absolute;
+    left: 42vw;
+    top: 5vh;
+    z-index: 0;
+    opacity: 0;
+    animation:spin 4s linear infinite;
+}
+#pin1:hover + #name1{
+    opacity: 1;
+}
 
-#locate1{
+#pin2{
+    position: absolute;
+    left: 27vw;
+    top: 23vh;
+    z-index: 0;
+    opacity: 0;
+    animation:spin 4s linear infinite;
+}
+#pin2:hover + #name2{
+    opacity: 1;
+}
+
+#pin3{
+    position: absolute;
+    left: 50vw;
+    top: 93vh;
+    z-index: 0;
+    opacity: 0;
+    animation:spin 4s linear infinite;
+}
+#pin3:hover + #name3{
+    opacity: 1;
+}
+
+#pin4{
+    position: absolute;
+    left: 56vw;
+    top: 60vh;
+    z-index: 0;
+    opacity: 0;
+    animation:spinre 4s linear infinite;
+}
+#pin4:hover + #name4{
+    opacity: 1;
+}
+
+#pin5{
+    position: absolute;
+    left: 87vw;
+    top: 30vh;
+    z-index: 0;
+    opacity: 0;
+    animation:spinre 4s linear infinite;
+}
+#pin5:hover + #name5{
+    opacity: 1;
+}
+
+#pin6{
+    position: absolute;
+    left: 4vw;
+    top: 58vh;
+    z-index: 0;
+    opacity: 0;
+    animation:spinre 4s linear infinite;
+}
+#pin6:hover + #name6{
+    opacity: 1;
+}
+
+.name{
+    
+    text-align: center;
+    font-size: 14px;
+    max-width: 150px;
+    z-index: 9;
+    opacity: 0;
+    background-color: black;
+}
+
+#name1{
+    position: absolute;
+    top:1vh;
+    left:43vw;  
+}
+
+#name2{
+    position: absolute;
+    top:19vh;
+    left:28vw;  
+}
+
+#name3{
+    position: absolute;
+    top:89vh;
+    left:51vw;  
+}
+
+#name4{
+    position: absolute;
+    top:56vh;
+    left:57vw;  
+}
+
+#name5{
+    position: absolute;
+    top:26vh;
+    left:88vw;  
+}
+
+#name6{
+    position: absolute;
+    top:54vh;
+    left:5vw;  
+}
+
+
+#locate1, #locate2, #locate3, #locate4, #locate5, #locate6{
     position: absolute;
     top:0px;
     left: 0px;
@@ -106,7 +264,7 @@ overflow-y: hidden;}
     height: 50.5vw;
     
     
-    transition-duration: 5s;
+    transition-duration: 4s;
     
     z-index: 0;
     opacity: 0;
@@ -149,15 +307,31 @@ overflow-y: hidden;}
     transition-duration: 1s;
 }
 
+.street2{
+    position: absolute;
+    top:47vh;
+    left: 33vw;
+}
+
 .street:hover{
     opacity: 1;
     
 }
 
+.window{
+    opacity: 0.2;
+    transition-duration: 1s;
+}
+
+.window:hover{
+    opacity: 0.9;
+}
+
+
 .back{
     position: fixed;
     top: 25px;
     left: 25px;
-    font-size: 30px;
+    font-size: 35px;
     cursor: pointer;
 }
