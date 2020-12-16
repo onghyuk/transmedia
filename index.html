@@ -23,7 +23,7 @@
     
     
     <div class="cover">
-        <h1>Fictional palce for reamins</h1>
+        <h1>Fictional palce for remains</h1>
         <p class="content">The starting point of this project is Swansong.<br> Reading this article describing the situation of World War II, we imagined the atmosphere of war, and made it the center of the project.
         <br>
 We wanted to recreate the atmosphere of war (or post-war) through this project.<br>
@@ -34,32 +34,63 @@ The chosen materials  are urban spaces with traces of war left.<br> We decided t
         <input type="button" value="   " onclick="play();enter()" class="button">
     </div>   
     
+    <div id="aboutbox">
+    <a id="back" onclick="aboutback()">&larr;</a>
     
+    <p>S.Korea</p>
+    <div class="abouttext">
+    <p style="padding-left: 30px;">Enemy's Tomb</p>
+    <p style="padding-left: 30px;">Enemy's Tomb is located in Paju-si</p>
+    </div>
+    <div class="abouttext">
+    <p style="padding-left: 30px;">Imjin River</p>
+    </div>
+    <div class="abouttext">    
+    <p style="padding-left: 30px;">Hwa-jin-po Beach</p>
+    </div>
+    <p>Germany</p>
+    <div class="abouttext">
+    <p style="padding-left: 30px;">Flaktower3</p> 
+    </div>
+    <div class="abouttext">
+    <p style="padding-left: 30px;">Tempelhof</p>
+    </div>
+    <div class="abouttext">
+    <p style="padding-left: 30px;">Tiergarten</p>
+    </div>
+    
+    <p style="margin-top: 60px;">Graphic Design: Yerim Bak</p>
+    <p>Sound: Yerim Bak</p>
+    <p>Video: Yerim Bak, Son Lee, 예림이 친구(Germany)</p>
+    <p>Web Design, Developing: Son Lee </p>                      
+           
+    </div>
     
     <div id=background>
     <img src="BOARD!!.jpg" id="backimg">
     </div>
-    <p id="header">Fictional palce for reamins</p>
+    <p id="header">Fictional palce for remains</p>
     <p id="about" onclick="about()">About</p>
     
     
-    <div class="pin" id="pin1" onclick="pin1();enemy()" style="display: block;"></div>
-    <p class="name" id="name1">Enemy's Tomb</p>
     
-    <div class="pin" id="pin2"  onclick="pin2();imjin()" style="display: block;"></div>
-    <p class="name" id="name2">Imjin River</p>
+    <div class="pin" id="pin1" onclick="pin1();enemy()" style="display: block;"><p class="name" id="name1">Enemy's Tomb</p></div>
     
-    <div class="pin" id="pin3"  onclick="pin3();gosung()" style="display: block;"></div>
-    <p class="name" id="name3">Hwa-jin-po Beach</p>
     
-     <div class="pin" id="pin4"  onclick="pin4();tower()" style="display: block;"></div>
-    <p class="name" id="name4">Flaktower3</p>
+    <div class="pin" id="pin2"  onclick="pin2();imjin()" style="display: block;"><p class="name" id="name2">Imjin River</p></div>
     
-    <div class="pin" id="pin5"  onclick="pin5();tempelhof()" style="display: block;"></div>
-    <p class="name" id="name5">Tempelhof</p>
     
-    <div class="pin" id="pin6"  onclick="pin6();tiergarten()" style="display: block;"></div>
-    <p class="name" id="name6">Tiergarten</p>
+    <div class="pin" id="pin3"  onclick="pin3();gosung()" style="display: block;"><p class="name" id="name3">Hwa-jin-po Beach</p></div>
+    
+    
+     <div class="pin" id="pin4"  onclick="pin4();tower()" style="display: block;"><p class="name" id="name4">Flaktower3</p></div>
+    
+    
+    <div class="pin" id="pin5"  onclick="pin5();tempelhof()" style="display: block;"><p class="name" id="name5">Tempelhof</p></div>
+    
+    
+    <div class="pin" id="pin6"  onclick="pin6();tiergarten()" style="display: block;"><p class="name" id="name6">Tiergarten</p></div>
+    
     
     
     <div id="locate1">
@@ -100,13 +131,17 @@ The chosen materials  are urban spaces with traces of war left.<br> We decided t
     
     <div id="locate4">
        
-        <iframe width="28%" height="35.5%" class="street2" src="https://www.youtube.com/embed/EZsV5Wv4JPQ?autoplay=1&mute=1&loop=1&playlist=EZsV5Wv4JPQ&controls=0" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        
+        <a id="back4" onclick="back();">&larr;</a>
+         <iframe width="28%" height="35.5%" class="street2" src="https://www.youtube.com/embed/EZsV5Wv4JPQ?autoplay=1&mute=1&loop=1&playlist=EZsV5Wv4JPQ&controls=0" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         
         <div class="block"></div>
         
-        <a id="back4" onclick="back();">&larr;</a>
         
         <iframe src="https://www.google.com/maps/embed?pb=!4v1608063110212!6m8!1m7!1sCAoSLEFGMVFpcE11eWZkOGNtc2xzVmYzd0F6MkFJb2lfQ0pOajRyc3RhZnQtQ2Zy!2m2!1d52.54729651026571!2d13.38445352132908!3f6.042597610366004!4f-11.708123677479904!5f0.7820865974627469" width="80%" height="89%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="window"></iframe>
+        
+       
         
     </div>
     
@@ -178,22 +213,22 @@ The chosen materials  are urban spaces with traces of war left.<br> We decided t
       function enter() {
       document.getElementById("background").style.zIndex = "2";
       document.getElementById("background").style.opacity = "1";
-      document.getElementById("pin1").style.zIndex = "9"; 
+      document.getElementById("pin1").style.zIndex = "8"; 
       document.getElementById("pin1").style.opacity = "1";
           
-      document.getElementById("pin2").style.zIndex = "9"; 
+      document.getElementById("pin2").style.zIndex = "8"; 
       document.getElementById("pin2").style.opacity = "1"; 
           
-      document.getElementById("pin3").style.zIndex = "9"; 
+      document.getElementById("pin3").style.zIndex = "8"; 
       document.getElementById("pin3").style.opacity = "1"; 
           
-      document.getElementById("pin4").style.zIndex = "9"; 
+      document.getElementById("pin4").style.zIndex = "8"; 
       document.getElementById("pin4").style.opacity = "1";
           
-      document.getElementById("pin5").style.zIndex = "9"; 
+      document.getElementById("pin5").style.zIndex = "8"; 
       document.getElementById("pin5").style.opacity = "1";   
           
-      document.getElementById("pin6").style.zIndex = "9"; 
+      document.getElementById("pin6").style.zIndex = "8"; 
       document.getElementById("pin6").style.opacity = "1";       
           
       document.getElementById("locate1").style.zIndex = "7"; 
@@ -239,7 +274,13 @@ The chosen materials  are urban spaces with traces of war left.<br> We decided t
       document.getElementById("about").style.opacity = "1";        
       
           
-      }     
+      }    
+        
+      function aboutback() {
+      document.getElementById("aboutbox").style.width = "0vw";
+      document.getElementById("aboutbox").style.opacity = "0";       
+      document.getElementById("back").style.opacity = "0";        
+      }    
     </script>
     
     <script>
@@ -295,31 +336,49 @@ The chosen materials  are urban spaces with traces of war left.<br> We decided t
     $("#back1").click(function(){
         $("#enemy")[0].volume = 1;
         $("#enemy").animate({volume: 0}, 4500);
+        
+        $("#audio")[0].volume = 0;
+        $("#audio").animate({volume: 1}, 4500);
      });
         
     $("#back2").click(function(){    
         $("#imjin")[0].volume = 1;
         $("#imjin").animate({volume: 0}, 4500);
+        
+        $("#audio")[0].volume = 0;
+        $("#audio").animate({volume: 1}, 4500);
      });
      
     $("#back3").click(function(){         
         $("#gosung")[0].volume = 1;
         $("#gosung").animate({volume: 0}, 4500);
+        
+        $("#audio")[0].volume = 0;
+        $("#audio").animate({volume: 1}, 4500);
      });
         
     $("#back4").click(function(){    
         $("#tower")[0].volume = 1;
         $("#tower").animate({volume: 0}, 4500);
+        
+        $("#audio")[0].volume = 0;
+        $("#audio").animate({volume: 1}, 4500);
     });
         
     $("#back5").click(function(){    
         $("#tempelhof")[0].volume = 1;
         $("#tempelhof").animate({volume: 0}, 4500);
+        
+        $("#audio")[0].volume = 0;
+        $("#audio").animate({volume: 1}, 4500);
     });  
         
     $("#back6").click(function(){     
         $("#tiergarten")[0].volume = 1;
         $("#tiergarten").animate({volume: 0}, 4500);
+        
+        $("#audio")[0].volume = 0;
+        $("#audio").animate({volume: 1}, 4500);
      }); 
         
         
@@ -442,7 +501,14 @@ The chosen materials  are urban spaces with traces of war left.<br> We decided t
         
       function blockin() {
       document.getElementsByClassName("block").style.zIndex = "8";  
-      }   
+      } 
+        
+      function about() {
+      document.getElementById("aboutbox").style.width = "100vw"; 
+      document.getElementById("aboutbox").style.opacity = "1";       
+      document.getElementById("back").style.opacity = "1";  
+          
+      }      
     </script>
     
    

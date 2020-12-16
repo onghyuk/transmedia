@@ -17,9 +17,12 @@
    100% {opacity: 0;}   
 }
 
-@keyframes spin { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } }
+@keyframes spin { 25% {transform:rotateY(90deg); }
+50% {transform:rotateY(-90deg); }
+75% {transform:rotateY(90deg); }    
+}
 
-@keyframes spinre { 100% { -webkit-transform: rotateX(360deg); transform:rotateX(360deg); } }
+@keyframes spinre { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } }
 
 @font-face {
     font-family:"dotline";
@@ -117,19 +120,21 @@ font-family: dotline;}
 .pin{
     
     
-    width: 14px;
-    height: 14px;
+    max-width: 120px;
+    height: 16px;
     
     border-radius: 50%;
     background-color: none;
     
     
-    border: 2px dotted white;
+    
     
     cursor: pointer;
     
     transition-delay: 1.5s;
     transition-duration: 1.5s;
+    
+    animation:spin 50s linear infinite;
     
 }
 
@@ -139,7 +144,8 @@ font-family: dotline;}
     top: 5vh;
     z-index: 0;
     opacity: 0;
-    animation:spin 4s linear infinite;
+    
+    
 }
 #pin1:hover + #name1{
     opacity: 1;
@@ -151,7 +157,7 @@ font-family: dotline;}
     top: 23vh;
     z-index: 0;
     opacity: 0;
-    animation:spin 4s linear infinite;
+    
 }
 #pin2:hover + #name2{
     opacity: 1;
@@ -163,7 +169,7 @@ font-family: dotline;}
     top: 93vh;
     z-index: 0;
     opacity: 0;
-    animation:spin 4s linear infinite;
+    
 }
 #pin3:hover + #name3{
     opacity: 1;
@@ -175,7 +181,7 @@ font-family: dotline;}
     top: 60vh;
     z-index: 0;
     opacity: 0;
-    animation:spinre 4s linear infinite;
+    
 }
 #pin4:hover + #name4{
     opacity: 1;
@@ -187,7 +193,7 @@ font-family: dotline;}
     top: 30vh;
     z-index: 0;
     opacity: 0;
-    animation:spinre 4s linear infinite;
+    
 }
 #pin5:hover + #name5{
     opacity: 1;
@@ -195,11 +201,11 @@ font-family: dotline;}
 
 #pin6{
     position: absolute;
-    left: 4vw;
-    top: 58vh;
+    left: 7vw;
+    top: 56vh;
     z-index: 0;
     opacity: 0;
-    animation:spinre 4s linear infinite;
+    
 }
 #pin6:hover + #name6{
     opacity: 1;
@@ -209,47 +215,13 @@ font-family: dotline;}
     
     text-align: center;
     font-size: 14px;
-    max-width: 150px;
+    max-width: 300px;
     z-index: 9;
-    opacity: 0;
+    opacity: 1;
     background-color: black;
 }
 
-#name1{
-    position: absolute;
-    top:1vh;
-    left:43vw;  
-}
 
-#name2{
-    position: absolute;
-    top:19vh;
-    left:28vw;  
-}
-
-#name3{
-    position: absolute;
-    top:89vh;
-    left:51vw;  
-}
-
-#name4{
-    position: absolute;
-    top:56vh;
-    left:57vw;  
-}
-
-#name5{
-    position: absolute;
-    top:26vh;
-    left:88vw;  
-}
-
-#name6{
-    position: absolute;
-    top:54vh;
-    left:5vw;  
-}
 
 
 #locate1, #locate2, #locate3, #locate4, #locate5, #locate6{
@@ -311,6 +283,10 @@ font-family: dotline;}
     position: absolute;
     top:47vh;
     left: 33vw;
+    z-index: 8;
+    opacity: 0.3;
+    
+    transition-duration: 1s;
 }
 
 .street:hover{
@@ -318,15 +294,54 @@ font-family: dotline;}
     
 }
 
+.street2:hover{
+    opacity: 1;
+    
+}
+
 .window{
-    opacity: 0.2;
+    opacity: 0.99;
     transition-duration: 1s;
+    
+    z-index: 9;
 }
 
-.window:hover{
-    opacity: 0.9;
+
+
+#aboutbox{
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    width: 0vw;
+    height: 100vh;
+    
+    opacity: 0;
+    z-index: 9;
+    
+    background-color: black;
+    transition-duration: 2s;
+    
+    padding-top: 10vh;
+    padding-left: 5vw;
 }
 
+.abouttext{
+    display: grid;
+    grid-template-columns: 300px 500px;
+    height: 40px;
+}
+
+#back{
+    position: fixed;
+    top: 35px;
+    right: 33px;
+    font-size: 35px;
+    cursor: pointer;
+    
+    opacity: 0;
+    transition-duration: 2s;
+}
 
 #back1, #back2, #back3,#back4, #back5, #back6{
     position: fixed;
