@@ -117,8 +117,8 @@ font-family: dotline;}
 .pin{
     
     
-    width: 13px;
-    height: 13px;
+    width: 14px;
+    height: 14px;
     
     border-radius: 50%;
     background-color: none;
@@ -328,7 +328,7 @@ font-family: dotline;}
 }
 
 
-.back{
+#back1, #back2, #back3,#back4, #back5, #back6{
     position: fixed;
     top: 25px;
     left: 25px;

@@ -68,7 +68,7 @@ The chosen materials  are urban spaces with traces of war left.<br> We decided t
         
         <div class="block"></div>
         
-        <a class="back" onclick="back();">&larr;</a>
+        <a id="back1" onclick="back();">&larr;</a>
         
         <iframe src="https://www.google.com/maps/embed?pb=!4v1608048496760!6m8!1m7!1s1CKsa7XyLAv1Zdf57KBM1A!2m2!1d37.95632809037357!2d126.8539830565557!3f286.4634848052711!4f-10.991139320860313!5f0.7820865974627469" width="28%" height="38%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="street"></iframe>
        
@@ -80,7 +80,7 @@ The chosen materials  are urban spaces with traces of war left.<br> We decided t
         
         <div class="block"></div>
         
-        <a class="back" onclick="back();">&larr;</a>
+        <a id="back2" onclick="back();">&larr;</a>
         
         <iframe src="https://www.google.com/maps/embed?pb=!4v1608056218101!6m8!1m7!1sTh_rrVEAJvrqyQR-LEodvw!2m2!1d38.01997626677092!2d127.0152827766799!3f100.45510056271641!4f-12.566178236384175!5f0.7820865974627469" width="28%" height="38%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="street"></iframe>
        
@@ -92,7 +92,7 @@ The chosen materials  are urban spaces with traces of war left.<br> We decided t
         
         <div class="block"></div>
         
-        <a class="back" onclick="back();">&larr;</a>
+        <a id="back3" onclick="back();">&larr;</a>
         
         <iframe src="https://www.google.com/maps/embed?pb=!4v1608062357345!6m8!1m7!1sf83nGK7_BK38vFl7tqtM0g!2m2!1d38.48185170099722!2d128.4376970375172!3f63.06151698115225!4f-7.926587378288872!5f0.7820865974627469" width="28%" height="38%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="street"></iframe>
        
@@ -104,7 +104,7 @@ The chosen materials  are urban spaces with traces of war left.<br> We decided t
         
         <div class="block"></div>
         
-        <a class="back" onclick="back();">&larr;</a>
+        <a id="back4" onclick="back();">&larr;</a>
         
         <iframe src="https://www.google.com/maps/embed?pb=!4v1608063110212!6m8!1m7!1sCAoSLEFGMVFpcE11eWZkOGNtc2xzVmYzd0F6MkFJb2lfQ0pOajRyc3RhZnQtQ2Zy!2m2!1d52.54729651026571!2d13.38445352132908!3f6.042597610366004!4f-11.708123677479904!5f0.7820865974627469" width="80%" height="89%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="window"></iframe>
         
@@ -116,7 +116,7 @@ The chosen materials  are urban spaces with traces of war left.<br> We decided t
         
         <div class="block"></div>
         
-        <a class="back" onclick="back();">&larr;</a>
+        <a id="back5" onclick="back();">&larr;</a>
         
         <iframe src="https://www.google.com/maps/embed?pb=!4v1608064357146!6m8!1m7!1sCAoSLEFGMVFpcFBTNTM1Q1VYck8zWDVnSHA3Rk9Pam9pNjFRQW5HS05od3M1TmYt!2m2!1d52.4767846!2d13.3953607!3f213.56623857675845!4f7.070744887085354!5f0.7820865974627469" width="80%" height="89%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="window"></iframe>
         
@@ -128,7 +128,7 @@ The chosen materials  are urban spaces with traces of war left.<br> We decided t
         
         <div class="block"></div>
         
-        <a class="back" onclick="back();">&larr;</a>
+        <a id="back6" onclick="back();">&larr;</a>
         
         <iframe src="https://www.google.com/maps/embed?pb=!4v1608065722307!6m8!1m7!1sCAoSLEFGMVFpcE1kWTZyMUZWa1U3Y2ZjY0pkS0dwYTBNVHBJaHdRVENHbzVBbXpH!2m2!1d52.5139018!2d13.3547532!3f99.38045928749942!4f-9.779595831198307!5f0.7820865974627469" width="80%" height="89%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="window"></iframe>
         
@@ -292,25 +292,35 @@ The chosen materials  are urban spaces with traces of war left.<br> We decided t
         $("#tiergarten").animate({volume: 1}, 4500);
       }); 
         
-    $(".back").click(function(){
+    $("#back1").click(function(){
         $("#enemy")[0].volume = 1;
         $("#enemy").animate({volume: 0}, 4500);
+     });
         
+    $("#back2").click(function(){    
         $("#imjin")[0].volume = 1;
         $("#imjin").animate({volume: 0}, 4500);
-        
+     });
+     
+    $("#back3").click(function(){         
         $("#gosung")[0].volume = 1;
         $("#gosung").animate({volume: 0}, 4500);
+     });
         
+    $("#back4").click(function(){    
         $("#tower")[0].volume = 1;
         $("#tower").animate({volume: 0}, 4500);
+    });
         
+    $("#back5").click(function(){    
         $("#tempelhof")[0].volume = 1;
         $("#tempelhof").animate({volume: 0}, 4500);
+    });  
         
+    $("#back6").click(function(){     
         $("#tiergarten")[0].volume = 1;
         $("#tiergarten").animate({volume: 0}, 4500);
-      }); 
+     }); 
         
         
     </script>
