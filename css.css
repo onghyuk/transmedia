@@ -355,7 +355,7 @@ font-family: dotline;}
     position: fixed;
     top: 35px;
     right: 33px;
-    font-size: 35px;
+    font-size: 50px;
     cursor: pointer;
     
     opacity: 0;
@@ -366,6 +366,6 @@ font-family: dotline;}
     position: fixed;
     top: 25px;
     left: 25px;
-    font-size: 35px;
+    font-size: 50px;
     cursor: pointer;
 }
