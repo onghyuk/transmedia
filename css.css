@@ -326,10 +326,29 @@ font-family: dotline;}
     padding-left: 5vw;
 }
 
-.abouttext{
-    display: grid;
-    grid-template-columns: 300px 500px;
-    height: 40px;
+
+
+.swan{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    z-index: 9;
+    max-width: 150px;
+}
+
+.book{
+    position: absolute;
+    left: 150px;
+    top: 30px;
+    
+    opacity: 0;
+    width: 10%;
+    z-index: 9;
+}
+
+.swan:hover+.book{
+    opacity: 1;
+    
 }
 
 #back{
