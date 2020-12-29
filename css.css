@@ -76,9 +76,8 @@ font-family: dotline;}
 
 .content{
     max-width: 900px;
-    padding-left:25vw;
-    padding-right: 25vw;
-    
+   
+    margin: 0px auto;
     line-height: 25px;
 }
 
